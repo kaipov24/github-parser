@@ -8,8 +8,9 @@ import { bindActionCreators } from 'redux'
 
 import store, { history } from '../redux'
 
-import Home from '../components/home'
-import DummyView from '../components/dummy-view'
+import RepositoryPage from '../components/repository'
+import UserPage from '../components/userrepo'
+import InputField from '../components/input'
 import NotFound from '../components/404'
 
 import Startup from './startup'
@@ -82,9 +83,10 @@ export default (props) => {
       <ConnectedRouter history={history} location={props.location} context={props.context}>
         <StartupConnected>
           <Switch>
-            <Route exact path="/" component={() => <DummyView />} />
-            <Route exact path="/dashboard" component={() => <Home />} />
-            <PrivateRouteConnected exact path="/hidden-route" component={() => <DummyView />} />
+            <Route exact path="/" component={() => <InputField />} />
+            <Route exact path="/:userName" component={() => <UserPage />} />
+            <Route exact path="/:userName/:repositoryName" component={() => <RepositoryPage />} />
+            <PrivateRouteConnected exact path="/hidden-route" component={() => <InputField />} />
             <Route component={() => <NotFound />} />
           </Switch>
         </StartupConnected>
