@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import { history } from '../redux'
-import Header from './header'
-import Head from './head'
 
 const InputField = (props) => {
   const [userName, setuserName] = useState('')
@@ -12,12 +10,13 @@ const InputField = (props) => {
   }
   return (
     <div>
-      <Header />
-      <Head title="Hello" />
       <div className="flex items-center justify-center h-screen">
-        <div className="bg-indigo-800 text-black font-bold rounded-lg border shadow-lg p-10">
-          <input type="text" value={userName} onChange={onChange} />
+        <div className="bg-blue-500 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+          <div>
+            <input type="text" value={userName} onChange={onChange} />
+          </div>
           <button
+            className="flex items-center justify-center bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded"
             type="button"
             onClick={() => {
               history.push(`/${userName}`)
