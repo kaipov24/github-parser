@@ -6,6 +6,7 @@ const Main = () => {
   return (
     <div className="flex items-center justify-center h-screen">
       <input
+        id="input-field"
         className="bg-white shadow-xs rounded px-4 pt-2 pb-2 mb-2 mt-2"
         type="text"
         value={inputValue}
@@ -14,6 +15,7 @@ const Main = () => {
         }}
       />
       <button
+        id="search-button"
         className="bg-blue-500 shadow-base text-white rounded px-4 pt-2 pb-2 mb-2 ml-1 mt-2"
         type="button"
         onClick={() => {
