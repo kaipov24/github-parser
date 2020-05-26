@@ -9,7 +9,7 @@ const Header = () => {
         <div id="repository-name">{repoName || userName}</div>
         {userName && (
           <div>
-            <Link to="/">Go to main</Link>
+            <Link to="/" id="go-back">Go to main</Link>
           </div>
         )}
       </div>
