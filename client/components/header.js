@@ -15,7 +15,7 @@ const Header = () => {
       </div>
       {repoName && (
         <div>
-          <Link to={`/${userName}`}>List of repos</Link>
+          <Link to={`/${userName}`}id="go-repository-list">List of repos</Link>
         </div>
       )}
     </nav>
